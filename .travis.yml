@@ -1,8 +1,15 @@
 language: go
 
 go:
-  - 1.8.x
   - 1.9.x
   - 1.10.x
+  - 1.11.x
 
 script: go test -v ./...
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+env:
+  global:
+    secure: "BE5b2LMyL3QckrSp9LgeQ1ROFqUEOdf3uSNf9Y/37v8XW0zweAJTeCGFYsdWEVz3yhZyZdzV4Su3beACN14aO2rG4tc3PuLsRx7ENQXSe08bggBuelpVpYLWx1D1uPTkFh7mTTsuWF4YZXN2xSB8vA6PvniLcHEb6WaKahfRR9Cu9wNKlYN3pruA3o933xSfZuybgVnJP8ikCSq8liee5HKq+JawDw9HYHecRVhxZV/L3SKSdJeRlCzisPcZH61q/2wl+Z2eOMQ/LVIrORUVw6bJFnH37ZnfmheAnBefW5NI0OUs+FWL4+1H5j+iqimLMKPt/fjxlqtE4ki84NXP4z2ynVTHnQ/6fVGSKs0h+bXT6agz5B5g6dyMDt5stA4YnMm/hS98e9mjpTsJtU77XCu0Y0b0BTk7JKWIBn75iGWRbpYZ3XYAGoPpNTqKpZPTPnsSQ+BjI6r4QNjmlqziqXjo2t3HmbebG+uNoZ6GBh/34xJdCmIMJLY4fqueDIbQSZWjO/y4ZHZUnIBCe4xXAlFx6UC8EBuIHE5a2Y0g8Cg4NLW8pgV49fcc9wyPP8FUMpfOLSBQKTkz5dKHseE0/ZNDr5d9ihxUr1xEHvaId7nhF6Wi3T+4i2rYs31ac3i6/zKnLS/WHzCHeeIBvJPwcc4P/qgZLFccbIfncH+Xl1E="

@@ -3,7 +3,7 @@ package underscorego
 import (
 	"testing"
 
-	"github.com/magiconair/properties/assert"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestU_IsFunction(t *testing.T) {
